@@ -6,7 +6,7 @@ h1, h2, h3, h4, h5, h6,
 	line-height: 1.2;
 }
 
-/* home.html */
+/* navbar.html */
 #homeNav {
 	padding: 1rem;
 }
@@ -34,6 +34,7 @@ h1, h2, h3, h4, h5, h6,
 	border-radius: 0px 0px 10px 10px;
 }
 
+/* home.html */
 header.homeHero {
 	padding-top: 15.5rem;
     padding-bottom: 6rem;
@@ -160,4 +161,10 @@ header.homeHero {
 	#footer-dark .widget {
 		padding-bottom: 20px;
 	}
+}
+
+/* project.html */
+#project {
+	margin-top: 8rem;
+	margin-bottom: 10rem;
 }

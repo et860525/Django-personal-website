@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %}@Mango: Contact me{% endblock%} 
+
+{% block content %}
+<div id="contact">
+	<div class="container">
+		<h1>Contact Me</h1>
+		<form class="my-4" method="post">
+			{% csrf_token %}
+			{% for field in form %}
+				<div class="mt-2">
+					<label class="form-label" for="{{ field.auto_id }}">{{ field.label }}</label>
+					{{ field }}
+				</div>
+			{% endfor %}
+			<div class="d-grid gap-2">
+				<button class="btn btn btn-primary my-3" type="submit">Contact me</button>
+			</div>
+		</form>
+	</div>
+</div>
+{% endblock %}

@@ -168,3 +168,37 @@ header.homeHero {
 	margin-top: 8rem;
 	margin-bottom: 10rem;
 }
+
+/* contact.html */
+#contact {
+	max-width: 1000px;
+	margin: 10rem auto;
+}
+
+/* about.html */
+#about {
+	max-width: 1000px;
+	margin: 10rem auto;
+}
+
+#about img {
+	z-index: 0;
+}
+
+.about-intro {
+	background-color: rgba(220, 220, 220);
+	margin-top: 1rem;
+	padding: 3rem;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-family: monospace;
+	line-height: 1.8rem;
+}
+
+@media (min-width: 992px) {
+	.about-intro {
+		margin-top: -3rem;
+		position: relative;
+		z-index: 1;
+	}
+}

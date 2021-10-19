@@ -1,4 +1,17 @@
-/* Global */
+/* 
+*  CSS TABLE OF PERSONAL_WEB CONTENT
+*   
+*  1.0 - Globals
+*  2.0 - Navbar
+*  3.0 - Body
+*    3.1 - home.html
+*    3.2 - project.html
+*    3.3 - contact.html
+*    3.4 - about.html
+*  4.0 - Footer
+*/
+
+/*** 1.0 - Globals ***/
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-bottom: 0.5rem;
@@ -6,7 +19,7 @@ h1, h2, h3, h4, h5, h6,
 	line-height: 1.2;
 }
 
-/* navbar.html */
+/*** 2.0 - Navbar ***/
 #homeNav {
 	padding: 1rem;
 }
@@ -34,7 +47,8 @@ h1, h2, h3, h4, h5, h6,
 	border-radius: 0px 0px 10px 10px;
 }
 
-/* home.html */
+/*** 3.0 - Body ***/
+/*** 3.1 - home.html ***/
 header.homeHero {
 	padding-top: 15.5rem;
     padding-bottom: 6rem;
@@ -121,7 +135,47 @@ header.homeHero {
 	}
 }
 
-/* footer.html */
+/*** 3.2 - project.html ***/
+#project {
+	margin-top: 8rem;
+	margin-bottom: 10rem;
+}
+
+/*** 3.3 - contact.html ***/
+#contact {
+	max-width: 1000px;
+	margin: 10rem auto;
+}
+
+/*** 3.4 - about.html ***/
+#about {
+	max-width: 1000px;
+	margin: 10rem auto;
+}
+
+#about img {
+	z-index: 0;
+}
+
+.about-intro {
+	background-color: rgba(220, 220, 220);
+	margin-top: 1rem;
+	padding: 3rem;
+	border: 2px solid black;
+	border-radius: 5px;
+	font-family: monospace;
+	line-height: 1.8rem;
+}
+
+@media (min-width: 992px) {
+	.about-intro {
+		margin-top: -3rem;
+		position: relative;
+		z-index: 1;
+	}
+}
+
+/*** 4.0 - Footer ***/
 #footer-dark {
 	padding: 50px 0;
 	font-family: 'Courier New', Courier, monospace;
@@ -161,45 +215,5 @@ header.homeHero {
 @media (max-width: 768px) {
 	#footer-dark .widget {
 		padding-bottom: 20px;
-	}
-}
-
-/* project.html */
-#project {
-	margin-top: 8rem;
-	margin-bottom: 10rem;
-}
-
-/* contact.html */
-#contact {
-	max-width: 1000px;
-	margin: 10rem auto;
-}
-
-/* about.html */
-#about {
-	max-width: 1000px;
-	margin: 10rem auto;
-}
-
-#about img {
-	z-index: 0;
-}
-
-.about-intro {
-	background-color: rgba(220, 220, 220);
-	margin-top: 1rem;
-	padding: 3rem;
-	border: 2px solid black;
-	border-radius: 5px;
-	font-family: monospace;
-	line-height: 1.8rem;
-}
-
-@media (min-width: 992px) {
-	.about-intro {
-		margin-top: -3rem;
-		position: relative;
-		z-index: 1;
 	}
 }

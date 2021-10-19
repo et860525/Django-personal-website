@@ -8,9 +8,6 @@ def home_page(request):
 def project_page(request):
 	return render(request, 'project.html')
 
-def blog_page(request):
-	pass
-
 def contact_page(request):
 	form = ContactForm()
 

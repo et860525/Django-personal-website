@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
 
     <title>{% block title %}{% endblock %}</title>
   </head>
   <body>
-  {% include 'navbar.html' %}
+  {% include 'blog/navbar.html' %}
 	{% block content %}{% endblock %}
-  {% include 'footer.html' %}
+  {% include 'blog/footer.html' %}
 
     <!-- Optional JavaScript; choose one of the two! -->
 

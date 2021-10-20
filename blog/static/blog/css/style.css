@@ -1,4 +1,14 @@
-/* Global */
+/* 
+*  CSS TABLE OF BLOG CONTENT
+*   
+*  1.0 - Globals
+*  2.0 - Navbar
+*  3.0 - Body
+*    3.1 - Blog-home
+*  4.0 - Footer
+*/
+
+/*** 1.0 - Globals ***/
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
 	margin-bottom: 0.5rem;
@@ -6,7 +16,7 @@ h1, h2, h3, h4, h5, h6,
 	line-height: 1.2;
 }
 
-/* navbar.html */
+/*** 2.0 - Navbar ***/
 #homeNav {
 	padding: 1rem;
 }
@@ -34,11 +44,38 @@ h1, h2, h3, h4, h5, h6,
 	border-radius: 0px 0px 10px 10px;
 }
 
-/* blog-home.html */
+/*** 3.0 - Blog-home ***/
 section#blog-home {
 	padding-top: 8rem;
 	padding-bottom: 20rem;
 }
+
+.blog {
+	max-width: 950px;
+	margin: 0 auto;
+}
+
+.post {
+	border: 3px solid black;
+	padding: 0 4rem;
+}
+
+.post-content {
+	max-width: 950px;
+    padding: 1em 0 2em;
+    margin: 0 auto 1em;
+    background: #fff;
+	color: black;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.1rem;
+}
+
+.content-header a {
+	color: black;
+	text-decoration: none;
+}
+
+
 
 @media (min-width: 768px) {
 	/* #blog-home {
@@ -47,10 +84,13 @@ section#blog-home {
 	} */
 }
 
+@media (min-width: 975px) {
+	
+}
 
 
 
-/* footer.html */
+/*** 4.0 - Footer ***/
 #footer-dark {
 	padding: 50px 0;
 	font-family: 'Courier New', Courier, monospace;

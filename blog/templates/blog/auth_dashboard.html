@@ -1,0 +1,15 @@
+{% extends 'blog/base.html' %} 
+{% load static %} 
+{% block title %}Blog: Dashboard{% endblock%} 
+
+{% block content %}
+<div class="blog-dashboard" style="padding: 20rem 0;">
+	<div class="container">
+		<h1>Hello , {{ user.username }}</h1>
+		
+		<a class="btn btn-primary" href="{% url 'blog:new_post_page' %}">Add Post</a>
+		
+		<a href="{% url 'logout'%}">Logout</a>
+</div>
+</div>
+{% endblock %}

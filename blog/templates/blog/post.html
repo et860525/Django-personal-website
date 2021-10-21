@@ -1,12 +1,15 @@
 {% extends 'blog/base.html' %} 
-{% load static %} 
+
+{% load blog_extras %}
+
 {% block title %}Post{% endblock%} 
 
 {% block content %}
 
 <section id="blog-home">
 	<div class="container">
-		<h1>{{ headline }}</h1>
+		<h1>{{ post.headline }}</h1>
+		<p>{{ post.body|convert_markdown|safe }}</p>
 	</div>
 </section>
 

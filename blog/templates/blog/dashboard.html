@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %} 
+{% load static %} 
+{% block title %}Blog: Dashboard{% endblock%} 
+
+{% block content %}
+<div class="blog-dashboard" style="padding: 8rem 0;">
+	<div class="container">
+		<div class="d-flex justify-content-center align-items-end">
+			<h1>Hello , {{ user.username }}</h1>
+			<a href="{% url 'logout'%}">Logout</a>
+		</div>
+		<div class="text-center mt-5">
+			<a class="btn btn-primary" href="{% url 'blog:post_create_page' %}">Add Post</a>
+		</div>
+		
+
+		<br>
+		<br>
+		{% for post in posts %}
+		<div style="max-width: 800px; margin: 0 auto; text-align: center;">
+			<a href="{{ post.get_absolute_url }}" style="display: inline-block;"><h5>{{ post }}</h5></a>
+			<a class="btn btn-success ms-4" href="#" >Edit</a>
+			<a class="btn btn-danger" href="#" >Delete</a>
+		</div>
+		{% endfor %}
+		
+</div>
+</div>
+{% endblock %}

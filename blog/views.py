@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from django.contrib.auth.decorators import login_required
 
 from .models import Post
-from .forms import CreatePost
+from .forms import CreatePost, UpdatePost
 
 # Create your views here.
 def home_page(request):
@@ -10,7 +10,6 @@ def home_page(request):
 
 def post_page(request, slug):
 	post = Post.objects.get(slug=slug)
-	print(post)
 
 	return render(request, 'blog/post.html', {'post': post})
 
@@ -47,10 +46,25 @@ def post_create(request):
 
 # Update Post
 @login_required
-def post_update(request):
-	pass
+def post_update(request, slug):
+	post = Post.objects.get(slug=slug)
+	form = UpdatePost(instance=post)
+
+	if request.method == 'POST':
+		form = UpdatePost(request.POST, instance=post)
+		if form.is_valid():
+			form.save()
+		return redirect('blog:blog_dashboard_page')
+
+	return render(request, 'blog/post_form.html', {'form': form})
 
 # Delete Post
 @login_required
-def post_delete(request):
-	pass
+def post_delete(request, slug):
+	post = Post.objects.get(slug=slug)
+	
+	if request.method == 'POST':
+		post.delete()
+		return redirect('blog:blog_dashboard_page')
+
+	return render(request, 'blog/post_delete.html', {'post': post})

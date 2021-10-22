@@ -5,6 +5,8 @@
 *  2.0 - Navbar
 *  3.0 - Body
 *    3.1 - Blog-home
+*	 3.2 - Post
+*	 3.3 - Dashboard
 *  4.0 - Footer
 */
 
@@ -75,8 +77,6 @@ section#blog-home {
 	text-decoration: none;
 }
 
-
-
 @media (min-width: 768px) {
 	/* #blog-home {
 		padding-top: 25rem;
@@ -88,7 +88,28 @@ section#blog-home {
 	
 }
 
+/*** 3.3 - Dashboard ***/
+.blog-dashboard {
+	padding: 8rem 0;
+}
 
+.post-list {
+	border-top: 1px solid black; 
+	border-left: 2px solid black; 
+	border-right: 2px solid black; 
+	max-width: 1000px; 
+	margin: 0 auto;
+}
+
+.dashboard-post {
+	padding: 1rem 5rem; 
+	
+	border-bottom: 1px solid black;
+}
+
+.control-btns {
+	text-align: right;
+}
 
 /*** 4.0 - Footer ***/
 #footer-dark {

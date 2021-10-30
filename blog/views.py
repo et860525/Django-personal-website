@@ -30,10 +30,11 @@ def post_create(request):
 		if form.is_valid():
 			# Get form data
 			headline = form.cleaned_data['headline']
+			summary = form.cleaned_data['summary']
 			body = form.cleaned_data['body']
 
 			if not Post.objects.filter(headline=headline).exists():
-				post = Post(headline=headline, body=body)
+				post = Post(headline=headline, summary=summary, body=body)
 				post.save()
 
 				return redirect('blog:blog_dashboard_page')

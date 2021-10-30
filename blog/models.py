@@ -5,6 +5,7 @@ from django.urls import reverse
 # Create your models here.
 class Post(models.Model):
 	headline = models.CharField(max_length=50)
+	summary = models.CharField(max_length=150, null=True)
 	body = models.TextField()
 	date = models.DateTimeField(auto_now_add=True)
 	slug = models.SlugField(max_length=80, null=True)

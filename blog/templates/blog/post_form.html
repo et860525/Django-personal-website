@@ -5,11 +5,12 @@
 {% block content %}
 <div class="container" style="padding: 10rem 0;">
 	<h1>Post Form</h1>
-	{{request.path}}
 	<form method="POST">
 		{% csrf_token %}
 		<label for="{{ form.headline.id_for_label }}" class="form-label">Headline:</label>
 		{{ form.headline }}
+		<label for="{{ form.summary.id_for_label }}" class="form-label">Summary:</label>
+		{{ form.summary }}
 		<label for="{{ form.body.id_for_label }}" class="form-label">Body:</label>
 		{{ form.body }}
 		<label for="{{ form.slug.id_for_label }}" class="form-label">Slug:</label>

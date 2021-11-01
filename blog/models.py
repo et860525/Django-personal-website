@@ -17,8 +17,17 @@ class Post(models.Model):
 		return reverse('blog:post_detail_page', kwargs={'slug': self.slug})
 	
 	def save(self, *args, **kwargs): # new
-		if not self.slug:
-			self.slug = slugify(self.headline)
+		if self.slug == None:
+			slug = slugify(self.headline)
+
+			has_slug = Post.objects.filter(slug=slug).exists()
+			i = 1
+			while has_slug:
+				i += 1
+				slug = slugify(self.headline) + '-' + str(i)
+				has_slug = Post.objects.filter(slug=slug).exists()
+			self.slug = slug
+
 		return super().save(*args, **kwargs)
 
 class Category(models.Model):

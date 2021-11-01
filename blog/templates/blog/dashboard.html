@@ -22,7 +22,7 @@
 						<a href="{{ post.get_absolute_url }}" style="display: inline-block;"><h5>{{ post }}</h5></a>
 						<p>{{post.summary}}</p>
 					</div>
-					<div class="col-12 col-md-5">
+					<div class="col-12 col-md-5 align-self-center">
 						<div class="control-btns">
 							<a class="btn btn-success" href="{% url 'blog:post_update_page' post.slug %}" >Edit</a>
 							<a class="btn btn-danger" href="{% url 'blog:post_delete_page' post.slug %}" >Delete</a>

@@ -9,17 +9,14 @@
 		<div class="blog-lists">
 			<!-- loop blog -->
 			<div class="blog mt-2">
-				{% for i in '123456' %}
+				{% for post in posts %}
 				<article class="post my-5">
 					<div class="post-content">
 						<div class="content-header">
-							<h1><a href="">Example Blog Name</a></h1>
+							<h1><a href="">{{ post.headline }}</a></h1>
 						</div>
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-							Obcaecati iure illo, repellendus dolores omnis nobis itaque mollitia corrupti? Odio enim, 
-							dicta sunt in officiis adipisci modi voluptatibus inventore ratione ex.
-						</p>
-						<a href="#" style="float: right; color: black; font-family: Arial, Helvetica, sans-serif;">Read More</a>
+						<p>{{ post.summary }}</p>
+						<a href="{{ post.get_absolute_url }}" style="float: right; color: black; font-family: Arial, Helvetica, sans-serif;">Read More</a>
 					</div>
 				</article>
 				{% endfor %}

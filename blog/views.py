@@ -6,7 +6,9 @@ from .forms import CreatePost, UpdatePost
 
 # Create your views here.
 def home_page(request):
-	return render(request, 'blog/home.html')
+	posts = Post.objects.all()
+
+	return render(request, 'blog/home.html', {'posts': posts})
 
 def post_page(request, slug):
 	post = Post.objects.get(slug=slug)

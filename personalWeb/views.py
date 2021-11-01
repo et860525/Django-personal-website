@@ -32,10 +32,14 @@ def contact_page(request):
             )
 
 			email.send(fail_silently=False)
+			return redirect("email_send_result")
 
 		return redirect("home_page")
 
 	return render(request, 'personalWeb/contact.html', {'form': form})
+
+def email_send_result(request):	
+	return render(request, 'personalWeb/email_send_result.html')
 
 def about_page(request):
 	return render(request, 'personalWeb/about.html')

@@ -1,4 +1,7 @@
 from django.shortcuts import render, redirect
+from django.template.loader import render_to_string
+from django.core.mail import EmailMessage
+from django.conf import settings
 from .forms import ContactForm
 
 # Create your views here.
@@ -14,8 +17,22 @@ def contact_page(request):
 	if request.method == 'POST':
 		form = ContactForm(request.POST)
 		if form.is_valid():
-			pass
-		
+			# Let html transform to string, for email body.
+			template = render_to_string(r'personalWeb/email_template.html', {
+				'name': request.POST['name'],
+				'email': request.POST['email'],
+				'message': request.POST['message'],
+			})
+			
+			email = EmailMessage(
+				'MangoStudio來信',  # 電子郵件標題
+				template,  # 電子郵件內容
+				settings.EMAIL_HOST_USER,  # 寄件者
+				['et860525@gmail.com']  # 收件者
+            )
+
+			email.send(fail_silently=False)
+
 		return redirect("home_page")
 
 	return render(request, 'personalWeb/contact.html', {'form': form})

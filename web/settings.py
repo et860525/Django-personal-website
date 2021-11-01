@@ -12,6 +12,11 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 
 from pathlib import Path
 
+import environ
+# Initialise environment variables
+env = environ.Env()
+environ.Env.read_env()
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -20,7 +25,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-d!!+%r0s1f-mo0$74#iul*u%pesbel6#0e47$!^n%bopo7m%z9'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -129,3 +134,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Auth
 LOGIN_REDIRECT_URL = '/blog/dashboard/'
 LOGOUT_REDIRECT_URL = '/blog/'
+
+# SMTP Configuration
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  #SMTP伺服器
+EMAIL_PORT = 587  #TLS通訊埠號
+EMAIL_USE_TLS = True  #開啟TLS(傳輸層安全性)
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')  #寄件者電子郵件
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')  #Gmail應用程式的密碼

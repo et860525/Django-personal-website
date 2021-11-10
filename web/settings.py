@@ -38,6 +38,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'personalWeb',
     'blog',
+    'toDo',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

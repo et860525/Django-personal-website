@@ -1,0 +1,24 @@
+{% extends 'toDo/base.html' %} 
+{% load static %} 
+{% block title %}@Mango: ToDo{% endblock%} 
+
+{% block content %}
+
+<div id="toDo">
+	<div class="container">
+		<h1>Create Task</h1>
+		<form method="POST">
+			{% csrf_token %}
+			<label for="{{ form.name.id_for_label }}" class="form-label">Name:</label>
+			{{ form.name }}
+			<label for="{{ form.detail.id_for_label }}" class="form-label">Detail:</label>
+			{{ form.detail }}
+			<label for="{{ form.due_date.id_for_label }}" class="form-label">Due_date:</label>
+			{{ form.due_date }}
+			<button type="submit" class="btn btn-primary">Create task</button>
+		</form>
+		
+	</div>
+</div>
+
+{% endblock %}

@@ -22,4 +22,4 @@ urlpatterns = [
     path('', include('personalWeb.urls')),
     path('blog/', include('blog.urls')),
     path('toDo/', include('toDo.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_URL)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

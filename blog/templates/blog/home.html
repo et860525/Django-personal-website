@@ -13,7 +13,7 @@
 				<article class="post my-5">
 					<div class="post-content">
 						<div class="content-header">
-							<h1><a href="">{{ post.headline }}</a></h1>
+							<h1><a href="{{ post.get_absolute_url }}">{{ post.headline }}</a></h1>
 						</div>
 						<p>{{ post.summary }}</p>
 						<a href="{{ post.get_absolute_url }}" style="float: right; color: black; font-family: Arial, Helvetica, sans-serif;">Read More</a>

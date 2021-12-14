@@ -26,7 +26,7 @@ Use this command to import all packages.
 
   I put the website on **pythonanywhere**.
 
-  Check out [this](et860525.pythonanywhere.com).
+  Check out et860525.pythonanywhere.com
 * Offline
 
   After you download my project, you need to create a file call **`.env`** put it into **`.\web\`** folder(same with `settings.py`).

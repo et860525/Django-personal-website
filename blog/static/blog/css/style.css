@@ -19,7 +19,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
-	margin-bottom: 0.5rem;
+	/* margin-bottom: 0.5rem; */
 	font-weight: 700;
 	line-height: 1.2;
 }
@@ -52,7 +52,7 @@ h1, h2, h3, h4, h5, h6,
 	border-radius: 0px 0px 10px 10px;
 }
 
-/*** 3.0 - Blog-home ***/
+/*** 3.1 - Blog-home ***/
 section#blog-home {
 	padding-top: 8rem;
 	padding-bottom: 10rem;
@@ -93,6 +93,17 @@ section#blog-home {
 @media (min-width: 975px) {
 	
 }
+
+/*** 3.2 - Post ***/
+#blog-post-page {
+	padding-top: 8rem;
+	padding-bottom: 10rem;
+}
+
+.post-header {
+	border-bottom: none !important;
+}
+
 
 /*** 3.3 - Dashboard ***/
 .blog-dashboard {

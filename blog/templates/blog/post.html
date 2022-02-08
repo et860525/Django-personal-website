@@ -6,11 +6,29 @@
 
 {% block content %}
 
-<section id="blog-home">
+<style>
+	.markdown-body {
+		box-sizing: border-box;
+		min-width: 200px;
+		max-width: 980px;
+		margin: 0 auto;
+		padding: 45px;
+	}
+
+	@media (max-width: 767px) {
+		.markdown-body {
+			padding: 15px;
+		}
+	}
+</style>
+
+<div id="blog-post-page">
 	<div class="container">
-		<h1>{{ post.headline }}</h1>
-		<p>{{ post.body|convert_markdown|safe }}</p>
+		<div class="markdown-body">
+			<h1 class="text-center post-header">{{ post.headline }}</h1>
+			<p>{{ post.body|convert_markdown|safe }}</p>
+		</div>
 	</div>
-</section>
+</div>
 
 {% endblock %}

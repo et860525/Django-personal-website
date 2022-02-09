@@ -24,38 +24,9 @@ h1, h2, h3, h4, h5, h6,
 	line-height: 1.2;
 }
 
-/*** 2.0 - Navbar ***/
-#homeNav {
-	padding: 1rem;
-}
-
-#homeNav .navbar-brand {
-	font-size: 1.5em;
-	font-weight: 800;
-	transition: font-size 0.3s ease-in-out;
-	font-weight: 700;
-    letter-spacing: 0.0625em;
-    text-transform: uppercase;
-}
-
-#homeNav .nav-item {
-	margin-right: 1rem;
-}
-
-#homeNav .nav-link {
-	font-size: 1.1rem;
-	color: white;
-	font-weight: 800;
-}
-
-#navbarText {
-	border-radius: 0px 0px 10px 10px;
-}
-
 /*** 3.1 - Blog-home ***/
 section#blog-home {
 	padding-top: 8rem;
-	padding-bottom: 10rem;
 }
 
 .blog {
@@ -64,7 +35,7 @@ section#blog-home {
 }
 
 .post {
-	border: 3px solid black;
+	border-left: 2px solid #999;
 	padding: 0 4rem;
 }
 
@@ -81,6 +52,18 @@ section#blog-home {
 .content-header a {
 	color: black;
 	text-decoration: none;
+}
+
+.content-header a:hover {
+	text-decoration: underline;
+}
+
+.post-date {
+	color: #888;
+}
+
+.post-summary {
+	color: #3a3a3a;
 }
 
 @media (min-width: 768px) {
